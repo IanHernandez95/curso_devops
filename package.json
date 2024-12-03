@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Proyecto básico de Node.js para CI/CD",
   "main": "src/app.js",
-  "build": "node src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "node src/app.js",
   },
   "engines": {
     "node": ">=22.0.0"
