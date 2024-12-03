@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/app.js",
     "test": "jest",
-    "build": "node src/app.js",
+    "build": "node src/app.js"
   },
   "engines": {
     "node": ">=22.0.0"
