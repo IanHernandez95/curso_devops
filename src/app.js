@@ -1,6 +1,5 @@
 const express = require('express');
 const axios = require('axios');
-const { setTimeout } = require('timers/promises');
 
 const app = express();
 
@@ -14,11 +13,6 @@ app.get('/api', async (req, res) => {
         res.json(response.data);
     } catch (error) {
         res.status(500).send('Error al obtener datos de la API externa');
-        // Optional: Cancel the build if error persists for a while
-      await setTimeout(async () => {
-        console.error('API call failed for too long. Canceling build.');
-        process.exit(1); // Exit with non-zero code to signal failure
-      }, 5000); // Cancel after 5 seconds
     }
 });
 
